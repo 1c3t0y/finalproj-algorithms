@@ -17,11 +17,13 @@ def fibonacci_i(n):
 		return 0
 
 	x = 0
-	y = 0
+	y = 1
 
-	for i in range(1, n - 1):
+	for i in range(1, n):
 		z = x + y
 		x = y
 		y = z
 
 	return y
+
+print(fibonacci_i(10))
