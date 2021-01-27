@@ -3,6 +3,9 @@ import os
 from algorithms.numeric.menu_numeric import menu_numeric
 from algorithms.sorting.menu_sorting import menu_sorting
 from algorithms.searching.menu_searching import menu_searching
+from algorithms.backtracking.menu_backtracking import menu_backtracking
+from algorithms.greedy.menu_greedy import menu_greedy
+from algorithms.dynamic.menu_dynamic import menu_dynamic
 
 def portada():
 	os.system("clear")
@@ -21,6 +24,9 @@ def menu_principal():
 		print("1) Numérico")
 		print("2) Ordenamiento")
 		print("3) Búsqueda")
+		print("4) Backtracking")
+		print("5) greedy")
+		print("6) Programación dinámica")
 		print("q) Salir")
 		opcion = str(input("¿Qué tipo de algoritmo desea utilizar?: "))
 
@@ -32,6 +38,15 @@ def menu_principal():
 
 		elif(opcion == '3'):
 			menu_searching()
+
+		elif(opcion == '4'):
+			menu_backtracking()
+
+		elif(opcion == '5'):
+			menu_greedy()
+
+		elif(opcion == '6'):
+			menu_dynamic()
 
 		elif(opcion == 'q'):
 			print("Saliendo...")
