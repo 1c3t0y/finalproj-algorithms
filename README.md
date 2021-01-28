@@ -65,10 +65,10 @@ También es recomendable instalar la librería Numpy, por lo que puede ejecutar
 foo@bar:~$ pip install numpy
 ```
 
-O con su package manager, por ejemplo para un SO con el package manager:
+O con su package manager, por ejemplo para un SO con el package manager dnf hay que ejecutar:
 
 ```console
-foo@bar:~$ sudo dnf install 
+foo@bar:~$ sudo dnf install python3-numpy
 ```
 
 Por último, para correr el programa basta con cambiarse a la carpeta donde se encuentra el archivo main.py y ejecutar:
