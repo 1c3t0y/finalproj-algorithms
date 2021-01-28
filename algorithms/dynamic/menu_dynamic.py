@@ -3,16 +3,18 @@ import utils.lectura_datos as leer
 import algorithms.dynamic.matrix_multiply as mm
 import algorithms.dynamic.matrix_chain_order as mco
 import algorithms.dynamic.cut_rod as cr
+import algorithms.dynamic.lcs as lcs
 
 def menu_dynamic():
 	opcion = '0'
 	while(opcion != 'q'):
 		os.system("clear")
 		print("Algoritmos de programación dinámica: \n")
-		print("1)Multiplicación de dos matrices")	
-		print("2)Matrix chain order")
-		print("3)Rod-cutting")
-		print("q)Regresar al menu anterior")
+		print("1) Multiplicación de dos matrices")	
+		print("2) Matrix chain order")
+		print("3) Rod-cutting")
+		print("4) LCS")
+		print("q) Regresar al menu anterior")
 
 		opcion = str(input("¿Qué algoritmo desea utilizar?: "))
 
@@ -39,6 +41,15 @@ def menu_dynamic():
 			n = leer.numero_entero("longitud para Rod-cutting")
 			costo = cr.cut_rod(p, n)
 			print("El costo mínimo con longitud " + str(n) + "es: " + str(costo))
+			input("Presione enter para continuar...")
+
+		elif (opcion == '4'):
+			X = input("Ingrese la cadena 1 para obtener la LCS")
+			Y = input("Ingrese la cadena 1 para obtener la LCS")
+			c, b = lcs_length(X, Y)
+			print("La LCS es: ")
+			print_lcs(b, X, len(X), len(Y))
+			print("")
 			input("Presione enter para continuar...")
 
 		elif(opcion == 'q'):

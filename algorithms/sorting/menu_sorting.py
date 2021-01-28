@@ -5,19 +5,21 @@ import algorithms.sorting.merge_sort as merge
 import algorithms.sorting.heap_sort as hs
 import algorithms.sorting.counting_sort as cs
 import algorithms.sorting.radix_sort as rs
+import algorithms.sorting.quicksort as qs
 
 def menu_sorting():
 	opcion = '0'
 	while(opcion != 'q'):
 		os.system("clear")
 		print("Algoritmos de ordenación: \n")
-		print("1)Insertion sort (ascendente)")
-		print("2)Insertion sort (descendente)")
-		print("3)Merge sort")
-		print("4)Heap Sort")
-		print("5)Counting Sort")
-		print("6)Radix Sort")
-		print("q)Regresar al menu anterior")
+		print("1) Insertion sort (ascendente)")
+		print("2) Insertion sort (descendente)")
+		print("3) Merge sort")
+		print("4) Heap Sort")
+		print("5) Counting Sort")
+		print("6) Radix Sort")
+		print("7) Quicksort")
+		print("q) Regresar al menu anterior")
 
 		opcion = str(input("¿Qué algoritmo desea utilizar?: "))
 
@@ -73,6 +75,15 @@ def menu_sorting():
 			print("El arreglo a ordenar es:")
 			print(arr)
 			arr_sort = rs.radixSort(arr)
+			print("El arreglo ordenado es:")
+			print(arr_sort)
+			input("Presione enter para continuar...")
+
+		elif(opcion == '7'):
+			arr = leer.arreglo_int("Quicksort")
+			print("El arreglo a ordenar es:")
+			print(arr)
+			arr_sort = qs.quicksort(arr, 0, len(arr) - 1)
 			print("El arreglo ordenado es:")
 			print(arr_sort)
 			input("Presione enter para continuar...")

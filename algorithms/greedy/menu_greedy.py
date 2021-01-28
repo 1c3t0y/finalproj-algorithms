@@ -7,9 +7,9 @@ def menu_greedy():
 	while(opcion != 'q'):
 		os.system("clear")
 		print("Algoritmos greedy: \n")
-		print("1)Selección de actividades recursivo")
-		print("2)Selección de actividades greedy")		
-		print("q)Regresar al menu anterior")
+		print("1) elección de actividades recursivo")
+		print("2) Selección de actividades greedy")		
+		print("q) Regresar al menu anterior")
 
 		opcion = str(input("¿Qué algoritmo desea utilizar?: "))
 

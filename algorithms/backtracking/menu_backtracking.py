@@ -9,10 +9,10 @@ def menu_backtracking():
 	while(opcion != 'q'):
 		os.system("clear")
 		print("Algoritmos de backtracking: \n")
-		print("1)N reinas")
-		print("2)Subset sum")
-		print("3)Construct Subset Sum")
-		print("q)Regresar al menu anterior")
+		print("1) N reinas")
+		print("2) Subset sum")
+		print("3) Construct Subset Sum")
+		print("q) Regresar al menu anterior")
 
 		opcion = str(input("¿Qué algoritmo desea utilizar?: "))
 

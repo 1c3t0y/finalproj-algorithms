@@ -8,11 +8,11 @@ def menu_numeric():
 	while(opcion != 'q'):
 		os.system("clear")
 		print("Algoritmos numéricos: \n")
-		print("1)Factorial de un número (recursivo)")
-		print("2)Factorial de un número (iterativo)")
-		print("3)i-ésimo número de Fibonacci (recursivo)")
-		print("4)i-ésimo número de Fibonacci (iterativo)")
-		print("q)Regresar al menu anterior")
+		print("1) Factorial de un número (recursivo)")
+		print("2) Factorial de un número (iterativo)")
+		print("3) i-ésimo número de Fibonacci (recursivo)")
+		print("4) i-ésimo número de Fibonacci (iterativo)")
+		print("q) Regresar al menu anterior")
 
 		opcion = str(input("¿Qué algoritmo desea utilizar?: "))
 
