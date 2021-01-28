@@ -10,12 +10,14 @@ def partition(A, p, r):
 
 
 def quicksort(A, p, r):
+	if len(A) == 1:
+		return A
+
 	if p < r:
 		q = partition(A, p ,r)
 		quicksort(A, p, q - 1)
-		quicksort(A, p + 1, q)
+		quicksort(A, q + 1,  r)
 	return A
-
 
 #A = [3,4,5,6,7,3,2,1,8,6]
 

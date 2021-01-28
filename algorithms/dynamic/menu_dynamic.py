@@ -40,15 +40,15 @@ def menu_dynamic():
 			p = leer.arreglo_int("lista de precios para Rod-cutting")
 			n = leer.numero_entero("longitud para Rod-cutting")
 			costo = cr.cut_rod(p, n)
-			print("El costo mínimo con longitud " + str(n) + "es: " + str(costo))
+			print("El costo mínimo con longitud " + str(n) + " es: " + str(costo))
 			input("Presione enter para continuar...")
 
 		elif (opcion == '4'):
-			X = input("Ingrese la cadena 1 para obtener la LCS")
-			Y = input("Ingrese la cadena 1 para obtener la LCS")
-			c, b = lcs_length(X, Y)
+			X = input("Ingrese la cadena 1 para obtener la LCS: ")
+			Y = input("Ingrese la cadena 2 para obtener la LCS: ")
+			c, b = lcs.lcs_length(X, Y)
 			print("La LCS es: ")
-			print_lcs(b, X, len(X), len(Y))
+			lcs.print_lcs(b, X, len(X), len(Y))
 			print("")
 			input("Presione enter para continuar...")
 

@@ -23,14 +23,15 @@ def bfs(G, s):
 
 def print_path(predecesor, s, v):
 	if v == s:
-		print("Nodo " + str(s + 1), end = "")
+		print("Nodo " + str(s), end = "")
 
 	elif predecesor[v] == None:
-		print("No existe un camino de " + str(s + 1) + " a " + str(v + 1))
+		print("No existe un camino de " + str(s) + " a " + str(v))
+		return None
 	
 	else:
 		print_path(predecesor, s, predecesor[v])
-		print(" -> Nodo " + str(v+1), end = "")
+		print(" -> Nodo " + str(v), end = "")
 
 
 #G = [[1, 4], [0, 5], [3, 6, 5], [6, 2], [0], [1, 2, 6], [5, 2, 3], []]

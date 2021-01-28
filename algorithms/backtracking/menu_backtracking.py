@@ -27,7 +27,7 @@ def menu_backtracking():
 			conjunto = leer.arreglo_int("Subset Sum")
 			numero = leer.numero_entero("el número del cual desea saber si hay subconjunto que lo sume")
 			if ss.subset_sum(conjunto, numero):
-				print("Si hay un subconjunto cuya suma de: " + str(numero))
+				print("Sí hay un subconjunto cuya suma de: " + str(numero))
 			else:
 				print("No hay un subconjunto cuya suma de: " + str(numero))
 			input("Presione enter para continuar...")

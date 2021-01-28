@@ -10,22 +10,25 @@ def relax(u, v, w, d, predecesores):
 		predecesores[v] = u
 	return d, predecesores
 
-def bellman_ford(G, w, s):
+def dijkstra(G, w ,s):
 	d, predecesores = initialize_single_source(G, s)
-
-	for u in range(0, len(G)) :
+	S = []
+	Q = d.copy()
+	Q.sort()
+	while len(Q) != 0:
+		u = d.index(Q[0])
+		Q.pop(0)  #Simulación de la min-priority queue
+		S = S + [u]
 		for v in range(0, len(G[u])):
+			print("")
+			print(u)
+			print(v)
+			print(d)
+				
 			d, predecesores = relax(u, v, w, d, predecesores)
+	return S
 
-	for u in range(0, len(G)) :
-		for v in range(0, len(G[u])):
-			if d[v] > d[u] + w[u][v]:
-				return False
-	return True
-
-
-#G = [[1, 3], [2, 3, 4], [], [2, 4], [2]]
-#w = [[6, 7], [5, 8, 4], [], [3, 9], [7]]
-#s = 0
-#print(bellman_ford(G, w, s))
-
+G = [[1, 3], [2, 3], [4], [1, 2, 4], [2, 0]]
+w = [[10, 5], [1, 2], [4], [3, 9, 2.1], [6, 7]]
+s = 0
+print(dijkstra(G, w, s))

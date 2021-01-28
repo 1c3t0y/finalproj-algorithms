@@ -26,4 +26,4 @@ def fibonacci_i(n):
 
 	return y
 
-print(fibonacci_i(10))
+#print(fibonacci_i(10))

@@ -24,17 +24,19 @@ def menu_graphs():
 			s = leer.numero_entero("para indicar la fuente de la gráfica")
 			d, predecesores =  bfs.bfs(G, s - 1)
 			print("El vector de distancias es: ")
-			printt(d)
+			print(d)
 			print("El vector de predecesores es: ")
 			print(predecesores)
+			input("Presione enter para continuar...")
 
 		elif(opcion == '2'):
 			G = leer.grafica("el camino más corto usando bfs")
 			s = leer.numero_entero("para indicar la fuente de la gráfica")
 			v = leer.numero_entero("para indicar el nodo destino de la gráfica")
-			d, predecesores =  bfs.bfs(G, s - 1)
-			print("El camino más corto de " + str(s) + " a " + str(v) + "es: ")
-			bfs.print_path(predecesores, s, v)			
+			d, predecesores =  bfs.bfs(G, s)
+			print("El camino más corto de " + str(s) + " a " + str(v) + " es: ")
+			bfs.print_path(predecesores, s, v)
+			input("\nPresione enter para continuar...")			
 
 		elif(opcion == '3'):
 			G = leer.grafica("el algoritmo DFS")
@@ -45,6 +47,7 @@ def menu_graphs():
 			print(d)
 			print("El vector finishing time es: ")
 			print(f)
+			input("Presione enter para continuar...")
 
 		elif(opcion == '4'):
 			G = leer.grafica("el algoritmo Bellman-Ford")
@@ -54,6 +57,7 @@ def menu_graphs():
 				print("No hay ciclos negativos en la gráfica")
 			else:
 				print("Hay ciclos negativos en la gráfica")
+			input("Presione enter para continuar...")
 
 		elif(opcion == 'q'):
 			print("Saliendo...")

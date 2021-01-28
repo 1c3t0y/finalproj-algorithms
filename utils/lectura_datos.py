@@ -66,10 +66,10 @@ def grafica(cadena = "el algoritmo seleccionado"):
 	g = [[] for i in range(0,n)]
 
 	for i, vertex in enumerate(g):
-		adj = numero_entero("de nodos a los que es adjacente el nodo " + str(i+ 1 ))
+		adj = numero_entero("de nodos a los que es adyacente el nodo " + str(i))
 		for j in range(0, adj):
-			adj_vertex = numero_entero("de nodo al que es adyacente el nodo " + str(i + 1))
-			vertex.append(adj_vertex - 1)
+			adj_vertex = numero_entero("de nodo al que es adyacente el nodo " + str(i))
+			vertex.append(adj_vertex)
 
 	return g
 
@@ -79,7 +79,7 @@ def pesos_grafica(G):
 	for i, u in enumerate(G):
 		pesos = []
 		for v in u:
-			peso = int(input("Ingrese el peso para la arista que va del nodo " + str(i + 1) + " al nodo " + str(v + 1) + ": "))
+			peso = int(input("Ingrese el peso para la arista que va del nodo " + str(i) + " al nodo " + str(v) + ": "))
 			pesos.append(peso)
 		w.append(pesos)
 
