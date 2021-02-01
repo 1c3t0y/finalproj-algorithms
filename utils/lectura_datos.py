@@ -1,7 +1,5 @@
 import numpy as np
 
-from graph import Graph, Graph3D
-
 def numero_entero(cadena = "Deseado"):
 	return int(input("Ingrese el número " + cadena + ": "))
 
